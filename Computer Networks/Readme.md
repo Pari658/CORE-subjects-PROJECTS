@@ -30,6 +30,3 @@ It demonstrates the reduction in **latency** and improvement in **performance** 
 4. If no edge server is close, the request is routed to the **origin server**.  
 5. The simulation shows how CDNs reduce load time and improve speed.
 
----
-
-## 🗂️ Project Structure
