@@ -1,0 +1,115 @@
+========================================
+C++ PROJECT: IP ADDRESS MANAGEMENT SYSTEM
+========================================
+
+📌 PROJECT OVERVIEW
+-------------------
+This project simulates an IP Address Management System used by a network administrator
+to assign, validate, and manage IP addresses for multiple devices.
+
+The system demonstrates key Object-Oriented Programming (OOP) concepts such as
+Encapsulation, Inheritance, Polymorphism, Static members, Friend classes, and
+Exception & File Handling.
+
+---
+
+💡 MAIN FEATURES
+----------------
+1. Add new devices with name and MAC address.
+2. Assign either Static or Dynamic IPv4 addresses.
+3. Validate IP address format.
+4. Detect duplicate IP addresses.
+5. Handle invalid and duplicate IPs using exceptions.
+6. Log all assigned IPs into a file (logs/assigned_ips.txt).
+7. Admin panel (friend class) to view all devices and total IPs assigned.
+
+---
+
+🧩 OBJECT-ORIENTED DESIGN
+-------------------------
+Classes used:
+- **IPAddress** → Base abstract class for IP operations.
+- **IPv4** → Derived class for IPv4 validation (polymorphism).
+- **Device** → Stores device details (name, MAC, assigned IP).
+- **NetworkManager** → Manages devices, assigns IPs, and handles file logging.
+- **Admin** → Friend class with full access to device list and statistics.
+
+OOP Concepts:
+- Encapsulation → Private data in Device and NetworkManager.
+- Inheritance → IPv4 inherits from IPAddress.
+- Polymorphism → validateIP() function overridden.
+- Static Member → Tracks total number of assigned IPs.
+- Friend Class → Admin accesses NetworkManager's private members.
+- Exception Handling → Invalid and duplicate IPs.
+- File Handling → Saves device info to logs/assigned_ips.txt.
+
+---
+
+⚙️ REQUIREMENTS
+---------------
+- C++ Compiler (GCC 6.3.0 or higher)
+- Supports C++14 or above
+- No external libraries required
+
+---
+
+📁 FOLDER STRUCTURE
+-------------------
+IP_Address_Manager/
+│
+├── include/
+│   ├── IPAddress.h
+│   ├── IPv4.h
+│   ├── Device.h
+│   ├── NetworkManager.h
+│   └── Admin.h
+│
+├── src/
+│   ├── IPv4.cpp
+│   ├── Device.cpp
+│   ├── NetworkManager.cpp
+│   └── Admin.cpp
+│
+├── logs/
+│   └── assigned_ips.txt
+│
+└── main.cpp
+
+---
+
+🛠️ HOW TO COMPILE
+------------------
+g++ -std=c++14 main.cpp src/*.cpp -I include -o ip_manager
+
+Run:
+./ip_manager      (Linux/Mac)
+ip_manager.exe    (Windows)
+
+---
+
+📘 SAMPLE OUTPUT
+----------------
+Enter device name: Laptop
+Enter MAC address: 00:1A:2B:3C:4D:5E
+Static or Dynamic IP? (s/d): s
+Enter IPv4 address: 192.168.0.10
+✅ Device added successfully.
+
+Do you want Admin View? (y/n): y
+
+===== ADMIN VIEW =====
+Device: Laptop | MAC: 00:1A:2B:3C:4D:5E | IP: 192.168.0.10
+------------------------
+Total IPs Assigned: 1
+========================
+
+---
+
+👩‍💻 AUTHOR
+------------
+Project by: [Your Name]
+Language: C++
+Version: 1.0
+Date: [Insert Date]
+
+========================================
